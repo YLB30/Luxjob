@@ -1,5 +1,6 @@
-con <- connect_db()
-DBI:: dbGetQuery(con, "SELECT
+get_companie <- function() {
+  con <- connect_db()
+  DBI:: dbGetQuery(con, "SELECT
       c.company_id,
       c.name,
       c.sector,
@@ -16,4 +17,7 @@ DBI:: dbGetQuery(con, "SELECT
     ORDER BY v.year DESC, v.month DESC NULLS LAST
     LIMIT 100;
 ")
-DBI::dbDisconnect(con)
+  DBI::dbDisconnect(con)
+}
+
+
