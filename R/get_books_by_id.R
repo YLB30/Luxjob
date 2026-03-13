@@ -1,4 +1,4 @@
-#' Title
+#'
 #'#' Get book recommendation by ID
 #'
 #' Retrieves a specific book recommendation from the `adem.book_recommendations`
