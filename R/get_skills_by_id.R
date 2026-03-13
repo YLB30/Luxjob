@@ -1,4 +1,7 @@
-# con <- connect_db()
-# DBI:: dbGetQuery(con, "SELECT DISTINCT skill_id, skill_label From adem.skills limit 100;")
-# DBI::dbDisconnect(con)
-#
+get_skill_by_id <- function() {
+  con <- connect_db()
+  DBI:: dbGetQuery(con, "SELECT DISTINCT skill_id, skill_label From adem.skills limit 100;")
+  DBI::dbDisconnect(con)
+                             }
+
+
