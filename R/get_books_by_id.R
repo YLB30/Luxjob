@@ -1,5 +1,5 @@
 #'
-#'#' Get book recommendation by ID
+#' #' Get book recommendation by ID
 #'
 #' Retrieves a specific book recommendation from the `adem.book_recommendations`
 #' table using its `book_id`. Automatically manages database connection and

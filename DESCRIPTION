@@ -13,3 +13,4 @@ URL: https://github.com/YLB30/myfirstpackage
 BugReports: https://github.com/YLB30/myfirstpackage/issues
 Imports: 
     DBI
+    renv
