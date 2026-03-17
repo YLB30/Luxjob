@@ -21,7 +21,7 @@
 #' @importFrom DBI dbGetQuery dbDisconnect
 get_companies <- function() {
   con <- connect_db()
-  result <- DBI::dbGetQuery(con, "SELECT * FROM adem_companies LIMIT 100;")
+  result <- DBI::dbGetQuery(con, "SELECT * FROM adem.companies LIMIT 100;")
   DBI::dbDisconnect(con)
   return(result)
 }
