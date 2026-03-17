@@ -28,6 +28,13 @@
 #' @importFrom DBI dbGetQuery dbDisconnect
 #' @importFrom glue glue_sql
 #' @importFrom RPostgres Postgres
+
+#' @param skill_id
+#'
+#' @returns
+#' @export
+#'
+#' @examples
 get_skill_by_id <- function(skill_id) {
   con <- connect_db()
 
@@ -45,17 +52,5 @@ get_skill_by_id <- function(skill_id) {
 
   return(result)
 }
-
-#' @param skill_id
-#'
-#' @returns
-#' @export
-#'
-#' @examples
-# get_skill_by_id <- function(skill_id) {
-#   con <- connect_db()
-#   DBI:: dbGetQuery(con, "SELECT DISTINCT skill_id, skill_label From adem.skills WHERE skill_id = {skill_id}  limit 100;")
-#   DBI::dbDisconnect(con)
-#                              }
 
 

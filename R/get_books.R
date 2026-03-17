@@ -24,6 +24,11 @@
 #' }
 #'
 #' @export
+
+#' @returns
+#' @export
+#'
+#' @examples
 get_book <- function(){
   con <- connect_db()
   on.exit(dbDisconnect(con))  # Auto-cleanup même si erreur
@@ -31,12 +36,3 @@ get_book <- function(){
   DBI::dbGetQuery(con, "SELECT * FROM adem.book_recommendations LIMIT 100;")
 }
 
-#' @returns
-#' @export
-#'
-#' @examples
-# get_book <- function(){
-#   con <- connect_db()
-#   DBI:: dbGetQuery(con, "SELECT * FROM adem.book_recommendations limit 100;")
-#   DBI::dbDisconnect(con)
-# }

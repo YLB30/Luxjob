@@ -24,22 +24,18 @@
 #' }
 #'
 #' @export
-get_skill <- function(){
-  con <- connect_db()
-  on.exit(dbDisconnect(con))  # Improved: auto-disconnect even on error
-
-  DBI::dbGetQuery(con, "SELECT * FROM adem.skills LIMIT 100;")
-}
 
 #' @returns
 #' @export
 #'
 #' @examples
-# get_skill <- function(){
-#   con <- connect_db()
-#   DBI:: dbGetQuery(con, "SELECT * From adem.skills limit 100;")
-#   DBI::dbDisconnect(con)
-# }
+get_skill <- function(){
+  con <- connect_db()
+  on.exit(dbDisconnect(con))  # Improved: auto-disconnect even on error
+
+  DBI::dbGetQuery(con, "SELECT * FROM adem.skills LIMIT 100;")
+  DBI::dbDisconnect(con)
+}
 
 
 
